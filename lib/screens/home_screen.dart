@@ -10,6 +10,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Theme.of(context).primaryColor,
         appBar: AppBar(
           elevation: 0,
           leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
@@ -21,7 +22,16 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: Column(
           children: [
-           CategorySelector(),
+            CategorySelector(),
+            Expanded(
+              child: Container(
+                  height: 500,
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).accentColor,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30),
+                          topRight: Radius.circular(30)))),
+            )
           ],
         ));
   }
