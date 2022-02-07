@@ -1,5 +1,7 @@
+import 'package:chatappui/models/message_model.dart';
 import 'package:chatappui/widgets/category_selector.dart';
 import 'package:chatappui/widgets/favorite_contacts.dart';
+import 'package:chatappui/widgets/recent_chats.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -33,9 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           topLeft: Radius.circular(30),
                           topRight: Radius.circular(30))),
                   child: Column(
-                    children: [
-                     FavoriteContacts()
-                    ],
+                    children: [FavoriteContacts(), RecentChats()],
                   )),
             )
           ],
